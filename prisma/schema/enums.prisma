@@ -4,3 +4,34 @@ enum Role {
   PROVIDER
   CUSTOMER
 }
+enum CategoryType {
+  PRODUCT
+  SERVICE
+  BLOG
+  BRAND
+  COLLECTION
+  DIGITAL_PRODUCT
+}
+
+enum CategoryStatus {
+  DRAFT
+  ACTIVE
+  PUBLISH
+  ARCHIVED
+}
+enum UserStatus {
+  ACTIVE
+  BLOCKED
+  DELETED
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  OTHER
+}
+
+enum AuthProvider {
+  GOOGLE
+  CREDENTIAL
+}
