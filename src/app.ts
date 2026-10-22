@@ -7,6 +7,7 @@ import express, {
 	type Response,
 } from "express";
 import httpStatus from "http-status";
+import router from "./app/routers";
 
 const app: Application = express();
 
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 // Middleware to parse JSON bodies
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api/v1",router);
 
 
 

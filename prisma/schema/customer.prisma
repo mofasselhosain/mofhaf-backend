@@ -1,5 +1,5 @@
 model Customer {
-  id String @id @default(uuid(7))
+  id String @id @default(uuid())
   name          String
   email         String    @unique
   contactNumber String?

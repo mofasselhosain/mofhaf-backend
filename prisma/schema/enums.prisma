@@ -17,6 +17,7 @@ enum CategoryStatus {
   DRAFT
   ACTIVE
   PUBLISH
+  UUPUBLISH
   ARCHIVED
 }
 enum UserStatus {
