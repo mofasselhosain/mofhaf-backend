@@ -22,13 +22,13 @@ export interface ICreateCategory {
   slug: string;
   categoryType?: CategoryType;
   description?: string;
-  image?: File;
-  banner?: File;
+  categoryImage?: File;
+  bannerImage?: File;
   status?: CategoryStatus;
   isActive?: boolean;
   sortOrder?: number;
   isFeatured?: boolean;
-  userId: string;
+  userId?: string;
 }
 
 // Update category interface

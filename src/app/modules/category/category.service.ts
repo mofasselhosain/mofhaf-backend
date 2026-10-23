@@ -83,7 +83,19 @@ const CategoryCreate = async (
 				.end(bannerImage?.buffer);
 		},
 	);
-
+console.log( "service",user?.id ,
+			 payload.name,
+			 payload.description,
+           payload.slug,
+			 payload.categoryType,
+			bannerImageUploadResult.secure_url,
+			 bannerImageUploadResult.public_id,
+		categoryImageUploadResult.secure_url,
+		 categoryImageUploadResult.public_id,
+			 payload.sortOrder,
+          payload.isFeatured,
+            payload.isActive,
+			payload.status,)
 	const createCategory = await prisma.category.create({
 		data: {
             userId:user?.id ,
