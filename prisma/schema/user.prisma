@@ -17,6 +17,7 @@ model User {
   updatedAt          DateTime     @updatedAt
   customer          Customer?
   category         Category[]
+  product          Product[]
   @@unique([email])
   @@map("users")
 }

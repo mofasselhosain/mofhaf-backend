@@ -14,7 +14,8 @@ model Category {
   isActive           Boolean    @default(true)
   sortOrder          Int            @default(0)
   isFeatured         Boolean        @default(false)
-  userId             String @unique
+  product            Product[]
+  userId             String
   user               User   @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
   createdAt          DateTime   @default(now())
   updatedAt          DateTime   @updatedAt

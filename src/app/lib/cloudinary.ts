@@ -9,3 +9,17 @@ Cloudinary.config({
 });
 
 export const cloudinary = Cloudinary;
+Cloudinary.config({
+	cloud_name: config.cloudinary_cloud_name,
+	api_key: config.cloudinary_api_key,
+	api_secret: config.cloudinary_api_secret,
+});
+
+export const cloudinaryTwo = Cloudinary;
+Cloudinary.config({
+	cloud_name: config.cloudinary_cloud_two_name,
+	api_key: config.cloudinary_api_two_key,
+	api_secret: config.cloudinary_api_two_secret,
+});
+
+export const cloudinaryThree = Cloudinary;
