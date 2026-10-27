@@ -1,7 +1,7 @@
 import type { UploadApiResponse } from "cloudinary";
 import { cloudinary } from "../../lib/cloudinary";
 import { prisma } from "../../lib/prisma";
-import { IUserUpdatedPayload } from "../auth/auth.interface";
+import type { IUserUpdatedPayload } from "../auth/auth.interface";
 
 const uploadProfileImage = async (buffer: Buffer| null | undefined, userId: string,payload:IUserUpdatedPayload ) => {
 

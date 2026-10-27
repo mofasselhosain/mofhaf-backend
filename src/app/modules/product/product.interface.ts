@@ -1,6 +1,6 @@
 
 
-import { Prisma, Product } from "../../../generated/prisma/client";
+import type { Prisma, Product } from "../../../generated/prisma/client";
 import type {
   CreateProductInput,
   UpdateProductInput,

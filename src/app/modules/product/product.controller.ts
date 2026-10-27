@@ -5,9 +5,9 @@ import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
 
 
-import { IRequestUser } from "../auth/auth.interface";
+import type { IRequestUser } from "../auth/auth.interface";
 import { createProductValidationSchema, updateProductValidationSchema } from "./product.validation";
-import { ICreateProduct, IUpdateProduct } from "./product.interface";
+import type { ICreateProduct, IUpdateProduct } from "./product.interface";
 import { ProductService } from "./product.service";
 
 

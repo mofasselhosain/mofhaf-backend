@@ -1,5 +1,5 @@
 import { CategoryType, Prisma, ProductStatus } from "../../../generated/prisma/client";
-import { IProductQueryPro } from "./product.interface";
+import type { IProductQueryPro } from "./product.interface";
 
 
 

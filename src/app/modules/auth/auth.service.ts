@@ -12,7 +12,6 @@ import {
 	UserStatus,
 } from  "../../../generated/prisma/enums";
 import config from "../../config";
-// import { googleClient } from "../../lib/googleAuth";
 import { transporter } from "../../lib/nodemailer";
 import { prisma } from "../../lib/prisma";
 import { redisClient } from "../../lib/redis";
@@ -244,7 +243,7 @@ const loginUser = async (payload: ILoginUserPayload) => {
 	);
 
 	if (!isPasswordMatched) {
-		throw new AppError(httpStatus.UNAUTHORIZED, "Invalid credentials");
+		throw new AppError(httpStatus.UNAUTHORIZED, "Invalid  password ,Please enter correct Password");
 	}
 
 	const jwtPayload = {

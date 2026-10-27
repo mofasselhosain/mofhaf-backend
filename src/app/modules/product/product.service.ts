@@ -2,13 +2,13 @@
 import httpStatus from "http-status";
 import { prisma } from "../../lib/prisma";
 import { AppError } from "../../utils/AppError";
-import { UploadApiResponse } from "cloudinary";
+import type { UploadApiResponse } from "cloudinary";
 import { cloudinary, cloudinaryTwo } from "../../lib/cloudinary";
-import { IQuery } from "../../intrerface/query.interface";
-import { IRequestUser } from "../auth/auth.interface";
+import type { IQuery } from "../../intrerface/query.interface";
+import type { IRequestUser } from "../auth/auth.interface";
 import { calculateMeta, calculatePagination } from "../../utiles/prisma-pagination";
 import { Prisma } from "../../../generated/prisma/client";
-import { ICreateProduct, IUpdateProduct } from "./product.interface";
+import type { ICreateProduct, IUpdateProduct } from "./product.interface";
 import { buildProductQuery } from "./product.consts";
 
 const productCreate = async (

@@ -3,9 +3,9 @@ import httpStatus from "http-status";
 import { AppError } from "../../utils/AppError";
 import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
-import { ICreateCategory, IUpdateCategory } from "./category.inferface";
+import type { ICreateCategory, IUpdateCategory } from "./category.inferface";
 import { CategoryService } from "./category.service";
-import { IRequestUser } from "../auth/auth.interface";
+import type { IRequestUser } from "../auth/auth.interface";
 import { createCategorySchema, updateCategorySchema } from "./category.validation";
 
 const CategoryCreate = catchAsync(async (req: Request, res: Response) => {

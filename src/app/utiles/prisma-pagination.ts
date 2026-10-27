@@ -1,4 +1,4 @@
-import { IPaginationOptions, IQuery } from "../intrerface/query.interface";
+import type { IPaginationOptions, IQuery } from "../intrerface/query.interface";
 
 
 export const calculatePagination = (

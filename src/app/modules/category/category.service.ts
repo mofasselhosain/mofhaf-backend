@@ -2,13 +2,13 @@
 import httpStatus from "http-status";
 import { prisma } from "../../lib/prisma";
 import { AppError } from "../../utils/AppError";
-import { UploadApiResponse } from "cloudinary";
+import type { UploadApiResponse } from "cloudinary";
 import { cloudinary } from "../../lib/cloudinary";
-import { ICreateCategory, IUpdateCategory } from "./category.inferface";
-import { IQuery } from "../../intrerface/query.interface";
-import { IRequestUser } from "../auth/auth.interface";
+import type { ICreateCategory, IUpdateCategory } from "./category.inferface";
+import type { IQuery } from "../../intrerface/query.interface";
+import type { IRequestUser } from "../auth/auth.interface";
 import { calculateMeta, calculatePagination } from "../../utiles/prisma-pagination";
-import { Prisma } from "../../../generated/prisma/client";
+import type { Prisma } from "../../../generated/prisma/client";
 
 const CategoryCreate = async (
 	payload: ICreateCategory,

@@ -2,18 +2,19 @@ import cookieParser from "cookie-parser";
 import cors from "cors";
 import express, {
 	type Application,
-	type NextFunction,
+	
 	type Request,
 	type Response,
 } from "express";
 import httpStatus from "http-status";
 import router from "./app/routers";
+import config from "./app/config";
 
 const app: Application = express();
 
 app.use(
 	cors({
-		origin: "config.frontend_url",
+		origin: config.frontend_url,
 		credentials: true,
 	}),
 );
@@ -49,7 +50,7 @@ app.use("/api/v1",router);
 app.get("/", async (req: Request, res: Response) => {
 	res.status(httpStatus.OK).json({
 		success: true,
-		message: "Welcome to PH Healthcare System Backend",
+		message: "Welcome to MOFHAF Backend",
 	});
 });
 
