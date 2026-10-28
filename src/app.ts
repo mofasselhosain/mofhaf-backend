@@ -12,12 +12,46 @@ import config from "./app/config";
 
 const app: Application = express();
 
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://mofhaf.vercel.app",
+];
+
+if (config.frontend_url) {
+  allowedOrigins.push(
+    config.frontend_url.replace(/\/$/, ""),
+  );
+}
+
 app.use(
-	cors({
-		origin: config.frontend_url,
-		credentials: true,
-	}),
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests without an Origin header, such as
+      // some server-to-server requests.
+      if (!origin || allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+
+      return callback(
+        new Error(`CORS blocked origin: ${origin}`),
+      );
+    },
+    credentials: true,
+    methods: [
+      "GET",
+      "POST",
+      "PUT",
+      "PATCH",
+      "DELETE",
+      "OPTIONS",
+    ],
+    allowedHeaders: [
+      "Content-Type",
+      "Authorization",
+    ],
+  }),
 );
+
 
 // Enable URL-encoded form data parsing
 app.use(express.urlencoded({ extended: true }));
